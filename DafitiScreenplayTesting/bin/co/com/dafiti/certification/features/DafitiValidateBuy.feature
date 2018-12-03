@@ -11,6 +11,7 @@ Feature: Buy Product Dafiti
       | email                  | password        |
       | jhonedercano@gmail.com | 5KVUrNrxg3ZMjUX |
     Then he should be able to see the logged in message
+      | HOLA, JHON |
     Given that jhon wants to buy an item
     When he searchs for the item
       | Zapatos |
