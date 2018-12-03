@@ -6,12 +6,17 @@ import static net.serenitybdd.screenplay.GivenWhenThen.then;
 import static net.serenitybdd.screenplay.GivenWhenThen.when;
 
 import static co.com.dafiti.certification.exceptions.UnableToLogin.getUnableToLoginMessage;
+import static co.com.dafiti.certification.exceptions.AbleToLogin.getAbleToLoginMessage;
 
 import java.util.List;
 
 import org.openqa.selenium.WebDriver;
 
+import static co.com.dafiti.certification.utils.Helper.with;
+
+import co.com.dafiti.certification.exceptions.AbleToLogin;
 import co.com.dafiti.certification.exceptions.UnableToLogin;
+import co.com.dafiti.certification.models.DafitiKeywordModel;
 import co.com.dafiti.certification.models.DafitiUserModel;
 import co.com.dafiti.certification.questions.TheDafitiLoginResultElement;
 import co.com.dafiti.certification.tasks.Login;
@@ -29,7 +34,7 @@ import net.thucydides.core.annotations.Managed;
 public class DafitiLoginStepDefinition {
 	
 	@Managed(driver = "chrome")
-	public static WebDriver hisBrowser;
+	private WebDriver hisBrowser;
 	
 	private Actor jhon = Actor.named("Jhon");
 	
@@ -44,7 +49,7 @@ public class DafitiLoginStepDefinition {
 	public void thatJhonWantsToLoginIntoDafiti() throws Exception {
 		givenThat(jhon).wasAbleTo(
 				OpenTheBrowser.on(dafitiHomePage),
-				Navigate.toTheDafitiLoginPage());
+				Navigate.toTheDafitiLoginPage(with(hisBrowser)));
 	}
 	
 	@When("^he enters his credentials$")
@@ -53,10 +58,17 @@ public class DafitiLoginStepDefinition {
 	}
 
 	@Then("^he should be able to see the logged in message$")
-	public void heShouldBeAbleToSeeTheLoggedInMessage() throws Exception {
+	public void heShouldBeAbleToSeeTheLoggedInMessage(List<DafitiKeywordModel> keyword) throws Exception {
 		then(jhon).should(
-				seeThat(TheDafitiLoginResultElement.isVisible())
+				seeThat(TheDafitiLoginResultElement.hasWelcomeText(keyword))
 				.orComplainWith(UnableToLogin.class, getUnableToLoginMessage()));
+	}
+	
+	@Then("^he shouldnt be able to see the logged in message$")
+	public void heShouldntBeAbleToSeeTheLoggedInMessage(List<DafitiKeywordModel> keyword) throws Exception {
+		then(jhon).should(
+				seeThat(TheDafitiLoginResultElement.hasNoText(keyword))
+				.orComplainWith(AbleToLogin.class, getAbleToLoginMessage()));
 	}
 
 }

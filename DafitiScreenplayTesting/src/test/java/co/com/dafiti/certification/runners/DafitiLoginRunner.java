@@ -10,7 +10,7 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 		features = "src/test/resources/co/com/dafiti/certification/features/DafitiLogin.feature",
 		glue = "co.com.dafiti.certification.stepdefinitions",
 		snippets = SnippetType.CAMELCASE,
-		tags = "@LoginSuccess")
+		tags = "@Login")
 public class DafitiLoginRunner {
 
 }

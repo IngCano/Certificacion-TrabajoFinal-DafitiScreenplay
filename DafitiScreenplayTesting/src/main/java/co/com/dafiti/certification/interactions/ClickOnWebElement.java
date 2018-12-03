@@ -6,7 +6,7 @@ import net.serenitybdd.screenplay.targets.Target;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
-import co.com.dafiti.certification.stepdefinitions.DafitiBuyStepDefinition;
+import org.openqa.selenium.WebDriver;
 import co.com.dafiti.certification.utils.WebElementRandomSelector;
 
 public class ClickOnWebElement implements Interaction{
@@ -14,9 +14,9 @@ public class ClickOnWebElement implements Interaction{
 	private Target theWebElement;
 	private WebElementRandomSelector select;
 	
-	public ClickOnWebElement(Target theWebElement) {
+	public ClickOnWebElement(Target theWebElement, WebDriver hisBrowser) {
 		this.theWebElement = theWebElement;
-		select = WebElementRandomSelector.workWith(DafitiBuyStepDefinition.hisBrowser);
+		select = WebElementRandomSelector.workWith(hisBrowser);
 	}
 	
 	@Override
@@ -24,8 +24,8 @@ public class ClickOnWebElement implements Interaction{
 		select.randomWebElementInside(theWebElement.getCssOrXPathSelector()).click();
 	}
 
-	public static ClickOnWebElement target(Target theWebElement) {
-		return instrumented(ClickOnWebElement.class, theWebElement);
+	public static ClickOnWebElement target(Target theWebElement, WebDriver hisBrowser) {
+		return instrumented(ClickOnWebElement.class, theWebElement, hisBrowser);
 	}
 
 }

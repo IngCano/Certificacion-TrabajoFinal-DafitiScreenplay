@@ -117,7 +117,7 @@
             <a href="2a4631d87648e59c428d4cf0e9247f9d286e4679f436ca2ce872e931eb4dfd58.html"><i class="fa fa-comments-o"></i> Stories</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 02-12-2018 13:54</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 02-12-2018 23:03</span>
     <br style="clear:left"/>
 </div>
 
@@ -172,9 +172,9 @@ To buy a product
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><i class='fa fa-check-square-o success-icon fa-2x' title='SUCCESS'></i></span>
+                            <span class="outcome-icon"><i class='fa fa-times-circle failure-icon fa-2x' title='FAILURE'></i></span>
                             <span class="test-case-title">
-                                <span class="success-color">login with correct credentials
+                                <span class="failing-color">login with correct credentials
                                     <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -191,22 +191,152 @@ To buy a product
 
     <div id="beforetable"></div>
     <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+
+                        <div class="panel-heading title="Element should be enabled exception: Expected enabled element was not enabled">
+                            Element should be enabled exception: Expected enabled element was not enabled
+                        </div>
+                <div><!-- Stack trace -->
+                    <button type="button" class="btn btn-danger" data-toggle="modal"
+                            data-target="#stacktraceModal-overall">
+                        View details
+                    </button>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="stacktraceModal-overall" tabindex="-1" role="dialog"
+                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"
+                                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                                </button>
+                                <h4 class="modal-title" id="stacktraceModalLabel">
+                                    net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException
+                                </h4>
+                            </div>
+                            <div class="modal-body">
+                                    <h5>
+                                        <pre>Expected enabled element was not enabled</pre>
+                                    </h5>
+                                    co.com.dafiti.certification.tasks.Login.performAs(Login.java
+                                    :24) <br>
+                                    co.com.dafiti.certification.stepdefinitions.DafitiLoginStepDefinition.heEntersHisCredentials(DafitiLoginStepDefinition.java
+                                    :57) <br>
+                                    cucumber.runner.Runner.runPickle(Runner.java
+                                    :80) <br>
+                                    org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java
+                                    :89) <br>
+                                    org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java
+                                    :41) <br>
+                                    org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java
+                                    :541) <br>
+                                    org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java
+                                    :763) <br>
+                                    org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java
+                                    :463) <br>
+                                    org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java
+                                    :209) <br>
+                            </div>
+
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"
+                                            aria-label="Close"><span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h4 class="modal-title" id="stacktraceModalLabel">
+                                        Caused by: org.openqa.selenium.TimeoutException
+                                    </h4>
+                                </div>
+                                <div class="modal-body">
+                                        <pre>Expected condition failed: waiting for By.xpath: //input[@id='LoginForm_email'] to be enabled (tried for 5 second(s) with 100 milliseconds interval)</pre>
+                                    <pre>
+                                        co.com.dafiti.certification.tasks.Login.performAs(Login.java :24) <br>
+                                        co.com.dafiti.certification.stepdefinitions.DafitiLoginStepDefinition.heEntersHisCredentials(DafitiLoginStepDefinition.java :57) <br>
+                                        cucumber.runner.Runner.runPickle(Runner.java :80) <br>
+                                        org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java :89) <br>
+                                        org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java :41) <br>
+                                        org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java :541) <br>
+                                        org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java :763) <br>
+                                        org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java :463) <br>
+                                        org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java :209) <br>
+                                    </pre>
+                                </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="panel-body">
+                    <a href="pagesource8840762021047161746.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                </div>
+            </div>
         <div class="slider-wrapper theme-default">
             <div id="slider">
-                <img src="cddf9b5918532d5d152ae490ba292cb00dbb93ee99a8beee3b9aef071c5f40b0.png" title="Given that jhon wants to login into dafiti" width="1034"/>
-                <img src="05e4b930f1059de90f5b6e22c9916bc21055654c28e23c06e0c3343c34dc794f.png" title="Jhon opens the Dafiti home page" width="1034"/>
-                <img src="2703628140296ac1837ff7f4260911d57532a99d53195d0e3528741efaacb6a5.png" title="Jhon clicks on Login register Button" width="1034"/>
-                <img src="9f6e0c0e34dbf9b8a4c26f1685813b04cc70f9a48f7f7cc800613e8a79543890.png" title="Jhon clicks on Login register Button" width="1034"/>
-                <img src="035039ef477d4379df348b96fef820e1b20415b780bcbbb63484edae241ee08b.png" title="When he enters his credentials
+                <img src="c8faae35e5591cd4a1fa76b5ed191825033c993a16359272f986effb68ba3229.png" title="Given that jhon wants to login into dafiti" width="1034"/>
+                <img src="ca51048511bb6cc1dc800fd483b62ea66dcb62302c7d8cc6837a3b151723ffe9.png" title="Jhon opens the Dafiti home page" width="1034"/>
+                <img src="8804646195067ce2320f89864cffe6c484cacdb5947d63eb95c128a7385a4fa8.png" title="Jhon clicks on Login register Button" width="1034"/>
+                <img src="d3760efce1a02176815336b5ea80b2e6693663a8412039fbc6cc850f47514875.png" title="Jhon clicks on Login register Button" width="1034"/>
+                <img src="a1199edf248deb570c8fd8c7294e177309e543539505d0551df64c3aea4f5603.png" title="When he enters his credentials
 | email | password |
 | jhonedercano@gmail.com | 5KVUrNrxg3ZMjUX |" width="1034"/>
-                <img src="a5b5ab5e735ca25fbf304fab5a61b679230ffed7aefb27300c49851bd0127ca9.png" title="Jhon enters 'jhonedercano@gmail.com' into Email text field" width="1034"/>
-                <img src="a5b5ab5e735ca25fbf304fab5a61b679230ffed7aefb27300c49851bd0127ca9.png" title="Jhon enters '5KVUrNrxg3ZMjUX' into Password text field" width="1034"/>
-                <img src="e4547aa1e3ad4023fe7700d942f93593b8774e156b3dcc9f98de43852d42192d.png" title="Jhon enters '5KVUrNrxg3ZMjUX' into Password text field" width="1034"/>
-                <img src="94c592f05cc9e20b88a0a8298d573ec445f927617d34e64ba18eaa34312b7f95.png" title="Jhon clicks on Login Button" width="1034"/>
-                <img src="035039ef477d4379df348b96fef820e1b20415b780bcbbb63484edae241ee08b.png" title="Jhon clicks on Login Button" width="1034"/>
-                <img src="fcc335c436ba4cbcf2376040371fb468f76e1be301da17990799ae555a33b2b3.png" title="Then he should be able to see the logged in message" width="1034"/>
-                <img src="ecc399264a4f50a5154d2daf146d5db01d6ef046a8c4b0d57805cd720c820cef.png" title="Then the dafiti login result element: <span class='success-color'>SUCCESS</span>" width="1034"/>
+                <img src="1e8ca178e551a161da8b57a027e0d187830c7a82286cd2aba89bfdf4e7f19edf.png" title="Jhon enters 'jhonedercano@gmail.com' into Email text field" width="1034"/>
+                <img src="cc60af79dd30b2bdd4cecb9ad90b01a9c25920f49f1e34fdc4afb59d864e4d77.png" title="Jhon enters 'jhonedercano@gmail.com' into Email text field" width="1034"/>
+                <img src="208d10158fe72e872ad31c71f24a9cfc1690d49ed0821a89fcc5afb7fbf4b5f8.png" title="Given that jhon wants to login into dafiti" width="1034"/>
+                <img src="74da05c67d99f9533dd56ca89e3e8ca15ef9ecc76c06b9b864931044c84fdd89.png" title="Jhon opens the Dafiti home page" width="1034"/>
+                <img src="6ad4a4e13e3509bc9382630fc50b4c1991c09c68717cf10e90f8f26fd2cd3992.png" title="Jhon clicks on Login register Button" width="1034"/>
+                <img src="8559b1efbc77d07ad4e38f48cfdef50338fb0af1ce790ad342cfb73769300cab.png" title="Jhon clicks on Login register Button" width="1034"/>
+                <img src="3401fae68d6524bf09020dfebff3879c214a31db97d98602322557e400d9e595.png" title="When he enters his credentials
+| email | password |
+| jhonedercano@gmail.com | 5KVUrNrx |" width="1034"/>
+                <img src="6d231b6279cfe215c02fb9eab7bf3947b71fe12396d130353237b440fe89533a.png" title="Jhon enters 'jhonedercano@gmail.com' into Email text field" width="1034"/>
+                <img src="71deabb69ecd6078f134c9b773e02959aca5006b50f352f5e4d3e04a1b5fdb26.png" title="Jhon enters '5KVUrNrx' into Password text field" width="1034"/>
+                <img src="cadb2ec0c9750821a7efe3900522365e04c15e53f61917b02b45847e29f61543.png" title="Jhon enters '5KVUrNrx' into Password text field" width="1034"/>
+                <img src="8d747528791bf86d66b45d49485e25bcb7ae1028341290ed4b986787ef52b724.png" title="Jhon clicks on Login Button" width="1034"/>
+                <img src="eaac6a70788fc8da0ee4fb5e482100d7f261a4a2a45718b8df27e823427520c1.png" title="Jhon clicks on Login Button" width="1034"/>
+                <img src="3401fae68d6524bf09020dfebff3879c214a31db97d98602322557e400d9e595.png" title="Then he shouldnt be able to see the logged in message
+|  |" width="1034"/>
+                <img src="3401fae68d6524bf09020dfebff3879c214a31db97d98602322557e400d9e595.png" title="Then the dafiti login result element" width="1034"/>
+                <img src="99fa2cb80878121a8c30f7a3a0402f2ae2490699660fdd6964224df648636c4c.png" title="Given that jhon wants to login into dafiti" width="1034"/>
+                <img src="4b3f0bbe904b076d1b707aecd953116338d1c7fb097df00d63d643352820363c.png" title="Jhon opens the Dafiti home page" width="1034"/>
+                <img src="773bfc954ad5eb84146084ac9b345c52866fd3eed404870d28513f158c338a58.png" title="Jhon clicks on Login register Button" width="1034"/>
+                <img src="1e829f240d5a5f5ec7ef38f9b438e6d03457885a258fc5d66e07ed12c30d9f99.png" title="Jhon clicks on Login register Button" width="1034"/>
+                <img src="1d12d52676323eb45bab0c6dad633ab136c024c52d9944285d1897db9fb1a6f2.png" title="When he enters his credentials
+| email | password |
+| jhonedercano | 5KVUrNrxg3ZMjUX |" width="1034"/>
+                <img src="c9f17295f1be5178869878146a475c96a3c9970b7f24672f2d4a4ba089b29412.png" title="When he enters his credentials
+| email | password |
+| jhonedercano | 5KVUrNrxg3ZMjUX |" width="1034"/>
+                <img src="1d12d52676323eb45bab0c6dad633ab136c024c52d9944285d1897db9fb1a6f2.png" title="Jhon enters 'jhonedercano' into Email text field" width="1034"/>
+                <img src="9f9cee4afac4e7c569b935fb29b306c132ef45850e094342c9e34504376048c4.png" title="Jhon enters 'jhonedercano' into Email text field" width="1034"/>
+                <img src="9f9cee4afac4e7c569b935fb29b306c132ef45850e094342c9e34504376048c4.png" title="Jhon enters '5KVUrNrxg3ZMjUX' into Password text field" width="1034"/>
+                <img src="9738d58d7a079bea96f7bb3a9869ae09e5ab7d3975a80484e1c01d03c9d19c0c.png" title="Jhon enters '5KVUrNrxg3ZMjUX' into Password text field" width="1034"/>
+                <img src="9738d58d7a079bea96f7bb3a9869ae09e5ab7d3975a80484e1c01d03c9d19c0c.png" title="Jhon clicks on Login Button" width="1034"/>
+                <img src="a149e42a185cd73149d508e80b20d7d1939779b950d78bc392ed96d72d09e7ad.png" title="Jhon clicks on Login Button" width="1034"/>
+                <img src="c9f17295f1be5178869878146a475c96a3c9970b7f24672f2d4a4ba089b29412.png" title="Then he shouldnt be able to see the logged in message
+|  |" width="1034"/>
+                <img src="a149e42a185cd73149d508e80b20d7d1939779b950d78bc392ed96d72d09e7ad.png" title="Then the dafiti login result element" width="1034"/>
+                <img src="c9f17295f1be5178869878146a475c96a3c9970b7f24672f2d4a4ba089b29412.png" title="Then the dafiti login result element" width="1034"/>
+                <img src="1d12d52676323eb45bab0c6dad633ab136c024c52d9944285d1897db9fb1a6f2.png" title="Given that jhon wants to login into dafiti" width="1034"/>
+                <img src="7a0ef37757b10a0d3df026f6bf97d1377ceee1c3400e54ceeac1d53b4e8e8b61.png" title="Jhon opens the Dafiti home page" width="1034"/>
+                <img src="8381e4b9d054eb6a2d2628a0701fd185b3636d663c6f5c04b55332546e117f2c.png" title="Jhon clicks on Login register Button" width="1034"/>
+                <img src="99fa2cb80878121a8c30f7a3a0402f2ae2490699660fdd6964224df648636c4c.png" title="Jhon clicks on Login register Button" width="1034"/>
+                <img src="5078a317796d7bf1ef949ea259020afdcd913925af5a37ffb5bba6a93d34d691.png" title="When he enters his credentials
+| email | password |
+| jhonedercano | 5KVUrN |" width="1034"/>
+                <img src="9f9cee4afac4e7c569b935fb29b306c132ef45850e094342c9e34504376048c4.png" title="Jhon enters 'jhonedercano' into Email text field" width="1034"/>
+                <img src="9f9cee4afac4e7c569b935fb29b306c132ef45850e094342c9e34504376048c4.png" title="Jhon enters '5KVUrN' into Password text field" width="1034"/>
+                <img src="749b5aa671280ecca3dbf3a12bbc37b5f98a776e2141e5cb6dfbbfd39e699f59.png" title="Jhon enters '5KVUrN' into Password text field" width="1034"/>
+                <img src="749b5aa671280ecca3dbf3a12bbc37b5f98a776e2141e5cb6dfbbfd39e699f59.png" title="Jhon clicks on Login Button" width="1034"/>
+                <img src="5078a317796d7bf1ef949ea259020afdcd913925af5a37ffb5bba6a93d34d691.png" title="Jhon clicks on Login Button" width="1034"/>
+                <img src="e689cf32b68893af1754f8b893f4ef761d51c283618122691d81d42ef7cfd32b.png" title="Then he shouldnt be able to see the logged in message
+|  |" width="1034"/>
+                <img src="5078a317796d7bf1ef949ea259020afdcd913925af5a37ffb5bba6a93d34d691.png" title="Then the dafiti login result element: <span class='failing-color'>FAILURE</span>" width="1034"/>
             </div>
         </div>
 

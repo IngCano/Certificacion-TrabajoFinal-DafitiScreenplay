@@ -15,6 +15,7 @@ import static co.com.dafiti.certification.exceptions.ItemNotAdded.getItemNotAdde
 import co.com.dafiti.certification.exceptions.SearchNotSuccessful;
 import co.com.dafiti.certification.models.DafitiKeywordModel;
 
+import static co.com.dafiti.certification.utils.Helper.with;
 import static co.com.dafiti.certification.exceptions.SearchNotSuccessful.getSearchNotSuccessfulMessage;
 import co.com.dafiti.certification.questions.TheDafitiSearchResultsElement;
 import co.com.dafiti.certification.questions.TheDafitiShoppingCart;
@@ -33,7 +34,7 @@ import net.thucydides.core.annotations.Managed;
 public class DafitiBuyStepDefinition {
 	
 	@Managed(driver = "chrome")
-	public static WebDriver hisBrowser;
+	public WebDriver hisBrowser;
 	
 	Actor jhon = Actor.named("Jhon");
 	
@@ -51,7 +52,7 @@ public class DafitiBuyStepDefinition {
 
 	@When("^he searchs for the item$")
 	public void heSearchsForTheItem(List<DafitiKeywordModel> keyword) throws Exception {
-		when(jhon).attemptsTo(Search.forThe(keyword));
+		when(jhon).attemptsTo(Search.forThe(keyword, with(hisBrowser)));
 	}
 
 	@Then("^he should be able to see the search results$")
@@ -62,7 +63,7 @@ public class DafitiBuyStepDefinition {
 
 	@When("^he adds the item to the shopping cart$")
 	public void heAddsTheItemToTheShoppingCart() throws Exception {
-		when(jhon).attemptsTo(Add.anItemToShoppingCart());
+		when(jhon).attemptsTo(Add.anItemToShoppingCart(with(hisBrowser)));
 	}
 
 	@Then("^he should be able to see the item in the shoping cart$")

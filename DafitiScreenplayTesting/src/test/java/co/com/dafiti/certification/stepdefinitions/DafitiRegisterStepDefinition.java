@@ -8,6 +8,7 @@ import java.util.List;
 
 import org.openqa.selenium.WebDriver;
 
+import static co.com.dafiti.certification.utils.Helper.with;
 import co.com.dafiti.certification.models.DafitiRegisterUserModel;
 import co.com.dafiti.certification.tasks.Navigate;
 import co.com.dafiti.certification.tasks.OpenTheBrowser;
@@ -39,7 +40,7 @@ public class DafitiRegisterStepDefinition {
 	public void thatJhonIsInTheDafitiRegisterPage() throws Exception {
 		givenThat(jhon).wasAbleTo(
 				OpenTheBrowser.on(dafitiRegisterPage),
-				Navigate.toTheDafitiRegisterPage());
+				Navigate.toTheDafitiRegisterPage(with(hisBrowser)));
 	}
 
 	@When("^he submits all the data entered$")
